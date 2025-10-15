@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim | Çankaya Nakliyat</title>
+  <meta name="description" content="Çankaya Nakliyat iletişim bilgileri. Adres, telefon, e-posta ve harita üzerinden konumumuza ulaşın." />
+  <meta name="keywords" content="Çankaya Nakliyat iletişim, nakliyat adres, lojistik şirketi Ankara" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand" aria-label="Çankaya Nakliyat Ana Sayfa">
+        <img src="assets/images/logo.svg" alt="Çankaya Nakliyat logosu" />
+      </a>
+      <nav aria-label="Ana menü">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="quote.html">Teklif Al</a>
+        <a href="contact.html" class="active">İletişim</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-nav" role="menu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="quote.html">Teklif Al</a>
+        <a href="contact.html">İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="inner-hero">
+      <div class="container">
+        <h1>Bizimle İletişime Geçin</h1>
+        <p>Operasyon merkezimize ulaşın, taşımacılık çözümlerimiz hakkında bilgi alın.</p>
+        <nav class="breadcrumb" aria-label="İçerik yolu">
+          <a href="index.html">Ana Sayfa</a> › <span>İletişim</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="tablet-grid">
+        <div>
+          <h2 class="section-title">İletişim Bilgilerimiz</h2>
+          <ul class="contact-details">
+            <li><strong>Adres:</strong> Çetin Emeç Bulvarı No:45, Çankaya / Ankara</li>
+            <li><strong>Telefon:</strong> <a href="tel:+903120000000">+90 312 000 00 00</a></li>
+            <li><strong>E-posta:</strong> <a href="mailto:info@cankayanakliyat.com">info@cankayanakliyat.com</a></li>
+            <li><strong>Destek:</strong> 7/24 operasyon merkezi iletişimi</li>
+          </ul>
+        </div>
+        <div>
+          <iframe class="map-iframe" title="Çankaya Nakliyat Konumu" src="https://www.openstreetmap.org/export/embed.html?bbox=32.844%2C39.906%2C32.861%2C39.915&amp;layer=mapnik&amp;marker=39.9114%2C32.8536" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h2 class="section-title">Bize Mesaj Gönderin</h2>
+        <p class="section-subtitle">Formu doldurarak talebinizi iletin. İlgili departmanımız, talep tipinize göre sizinle iletişime geçer.</p>
+        <form class="form" data-enhanced="true" aria-label="İletişim formu">
+          <div class="success-message" role="status">Mesajınız için teşekkürler! En kısa zamanda dönüş yapacağız.</div>
+          <div class="form-row">
+            <div>
+              <label for="contact-name">Ad Soyad *</label>
+              <input type="text" id="contact-name" name="name" placeholder="Adınızı ve soyadınızı girin" required aria-required="true" />
+            </div>
+            <div>
+              <label for="contact-email">E-posta *</label>
+              <input type="email" id="contact-email" name="email" placeholder="ornek@eposta.com" required aria-required="true" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="contact-phone">Telefon *</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="0 (5xx) xxx xx xx" required aria-required="true" pattern="[0-9\s()+-]{10,}" />
+            </div>
+            <div>
+              <label for="contact-subject">Konu *</label>
+              <select id="contact-subject" name="subject" required aria-required="true">
+                <option value="" disabled selected>Konu seçin</option>
+                <option value="destek">Operasyon Destek</option>
+                <option value="teklif">Teklif Talebi</option>
+                <option value="isbirligi">İş Birliği</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="contact-message">Mesajınız *</label>
+            <textarea id="contact-message" name="message" placeholder="Mesajınızı yazın" required aria-required="true"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Mesajı Gönder</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo.svg" alt="Çankaya Nakliyat" />
+        <p>Çankaya Nakliyat, 30 yılı aşkın tecrübesi ile Türkiye'nin dört bir yanında güvenilir lojistik çözümleri sunar.</p>
+      </div>
+      <div>
+        <h3>Menü</h3>
+        <ul>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="services.html">Hizmetler</a></li>
+          <li><a href="quote.html">Teklif Al</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>İletişim</h3>
+        <ul>
+          <li>Çetin Emeç Bulvarı No:45, Çankaya / Ankara</li>
+          <li><a href="tel:+903120000000">+90 312 000 00 00</a></li>
+          <li><a href="mailto:info@cankayanakliyat.com">info@cankayanakliyat.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Çalışma Saatleri</h3>
+        <p>Pazartesi - Cumartesi: 08.30 - 19.00<br />Pazar: 10.00 - 16.00</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year></span> Çankaya Nakliyat. Tüm hakları saklıdır.</span>
+      <a href="mailto:info@cankayanakliyat.com">info@cankayanakliyat.com</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
