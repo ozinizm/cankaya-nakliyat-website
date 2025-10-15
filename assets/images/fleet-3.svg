@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Şehir içi dağıtım aracı görseli</title>
+  <desc id="desc">Çankaya Nakliyat'ın şehir içi dağıtım araçlarını temsil eden kompakt kamyonet illüstrasyonu.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1f" />
+      <stop offset="100%" stop-color="#1d2a45" />
+    </linearGradient>
+    <linearGradient id="van" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f3f5fb" />
+      <stop offset="100%" stop-color="#c0c6d8" />
+    </linearGradient>
+    <linearGradient id="cab" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e63946" />
+      <stop offset="100%" stop-color="#ab2330" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#bg)" rx="24" />
+  <g transform="translate(70 150)">
+    <rect x="120" y="14" width="280" height="120" rx="24" fill="url(#van)" stroke="#9aa0b8" stroke-width="3" />
+    <rect x="36" y="44" width="120" height="100" rx="18" fill="url(#cab)" />
+    <rect x="54" y="58" width="64" height="44" rx="10" fill="#f5f6fb" />
+    <rect x="110" y="122" width="310" height="24" rx="10" fill="#1b243b" />
+    <rect x="150" y="48" width="220" height="18" rx="8" fill="#d5d8e4" />
+    <rect x="150" y="84" width="220" height="12" rx="6" fill="#b2b8ca" />
+    <circle cx="136" cy="168" r="30" fill="#05070d" />
+    <circle cx="136" cy="168" r="18" fill="#b6bfd8" />
+    <circle cx="320" cy="168" r="30" fill="#05070d" />
+    <circle cx="320" cy="168" r="18" fill="#b6bfd8" />
+    <rect x="60" y="40" width="36" height="10" rx="4" fill="#f9b233" />
+  </g>
+  <text x="300" y="320" fill="#c0c0c0" font-family="Poppins, Montserrat, sans-serif" font-weight="600" font-size="20" text-anchor="middle">ŞEHİR İÇİ DAĞITIM ARAÇLARI</text>
+</svg>
