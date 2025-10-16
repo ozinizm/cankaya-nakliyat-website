@@ -123,7 +123,7 @@ header {
 }
 
 .brand img {
-  width: 148px;
+  width: 168px;
   height: auto;
 }
 
@@ -411,6 +411,23 @@ nav.primary-nav a:focus-visible::after {
   font-size: 1.05rem;
 }
 
+.nationwide-grid {
+  display: grid;
+  gap: 2.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.nationwide-copy .cta-group {
+  margin-top: 2rem;
+}
+
+.map-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .highlight-box {
   background: linear-gradient(135deg, rgba(10, 15, 31, 0.98), rgba(10, 15, 31, 0.9));
   color: var(--color-white);
@@ -450,6 +467,16 @@ nav.primary-nav a:focus-visible::after {
 .values-list strong {
   font-size: 1.05rem;
   color: var(--color-white);
+}
+
+.check-list li {
+  background: rgba(10, 15, 31, 0.06);
+  border: 1px solid rgba(10, 15, 31, 0.12);
+  color: var(--color-text);
+}
+
+.check-list strong {
+  color: var(--color-text);
 }
 
 .grid {

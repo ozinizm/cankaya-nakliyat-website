@@ -1,9 +1,21 @@
-<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="180" height="48" rx="12" fill="#0F0F11"/>
-  <path d="M26 14H34.5C39.1944 14 42.5 17.3056 42.5 22C42.5 26.6944 39.1944 30 34.5 30H29.5V34H26V14ZM34.1 26.8C36.9667 26.8 38.7 24.9333 38.7 22C38.7 19.0667 36.9667 17.2 34.1 17.2H29.5V26.8H34.1Z" fill="white"/>
-  <path d="M48.5 14H63.4V17.2H52V21.1H62.1V24.3H52V30H63.6V33.2H48.5V14Z" fill="white"/>
-  <path d="M69.6 14H74.1L82.3 29.8L90.5 14H94.9L83.8 34.1H80.7L69.6 14Z" fill="#FF4E24"/>
-  <path d="M100.8 14H115.7V17.2H104.3V21.1H114.4V24.3H104.3V30H115.9V33.2H100.8V14Z" fill="white"/>
-  <path d="M121.6 14H126.3L134.9 24.4L143.5 14H148.2V34H144.4V19.6L134.9 30.5H134.7L125.2 19.6V34H121.6V14Z" fill="white"/>
-  <path d="M156.1 14H160.1L170 27.2V14H173.7V34H170.1L160 20.7V34H156.1V14Z" fill="#FF4E24"/>
+<svg width="240" height="96" viewBox="0 0 240 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Çankaya Nakliyat logosu</title>
+  <desc id="logoDesc">Kırmızı hızlı bir C simgesi ve yanında Çankaya Nakliyat yazısı</desc>
+  <defs>
+    <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6b6b" />
+      <stop offset="100%" stop-color="#e63946" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(10,10)">
+    <circle cx="38" cy="38" r="38" fill="none" stroke="#0a0f1f" stroke-width="6" />
+    <path d="M74 38c0-13.807-11.193-25-25-25h-9.2c-2.21 0-4 1.79-4 4v8.4c0 2.21 1.79 4 4 4h8.2c5.523 0 10 4.477 10 10s-4.477 10-10 10h-8.2c-2.21 0-4 1.79-4 4v8.4c0 2.21 1.79 4 4 4H49c13.807 0 25-11.193 25-25Z" fill="url(#speedGradient)" />
+    <g fill="url(#speedGradient)">
+      <rect x="82" y="22" width="28" height="6" rx="3" />
+      <rect x="82" y="34" width="36" height="6" rx="3" />
+      <rect x="82" y="46" width="24" height="6" rx="3" />
+    </g>
+  </g>
+  <text x="120" y="40" font-family="'Poppins', 'Montserrat', 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#0a0f1f">Çankaya Nakliyat</text>
+  <text x="120" y="64" font-family="'Poppins', 'Montserrat', 'Segoe UI', sans-serif" font-size="12" font-weight="600" letter-spacing="0.16em" fill="#e63946">TAŞIMADA GÜVENİN ADRESİ</text>
 </svg>
