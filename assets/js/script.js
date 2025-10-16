@@ -243,12 +243,8 @@
     updateSlider();
   }
 
-  const mapSvg = document.querySelector('[data-turkey-map]');
-  if (mapSvg) {
-    const provinceLayer = mapSvg.querySelector('[data-provinces]');
-    const tooltip = document.querySelector('[data-map-tooltip]');
-    const mapWrapper = tooltip?.closest('.map-wrapper') || mapSvg.parentElement;
-
+  const mapSvgs = document.querySelectorAll('[data-turkey-map]');
+  if (mapSvgs.length) {
     const provinceRegions = {
       Marmara: ['Balıkesir', 'Bilecik', 'Bursa', 'Çanakkale', 'Edirne', 'İstanbul', 'Kırklareli', 'Kocaeli', 'Sakarya', 'Tekirdağ', 'Yalova'],
       Ege: ['Afyonkarahisar', 'Aydın', 'Denizli', 'İzmir', 'Kütahya', 'Manisa', 'Muğla', 'Uşak'],
@@ -271,9 +267,9 @@
 
     const regionKeys = Object.keys(provinceRegions);
 
-    const createProvince = (name, regionIndex, itemIndex) => {
-      const region = regionKeys[regionIndex];
+    const createProvince = (region, itemIndex) => {
       const config = layout[region];
+      if (!config) return null;
       const column = itemIndex % config.columns;
       const row = Math.floor(itemIndex / config.columns);
       const cx = config.startX + column * config.gapX + (region === 'Karadeniz' ? row * 1.8 : 0);
@@ -285,51 +281,60 @@
       circle.setAttribute('r', '5.6');
       circle.setAttribute('tabindex', '0');
       circle.classList.add('province-point');
-      circle.dataset.name = name;
-      circle.dataset.region = region;
       return circle;
     };
 
-    let regionIndex = 0;
-    Object.entries(provinceRegions).forEach(([, names]) => {
-      names.forEach((name, index) => {
-        const circle = createProvince(name, regionIndex, index);
-        provinceLayer.appendChild(circle);
+    mapSvgs.forEach((mapSvg) => {
+      const provinceLayer = mapSvg.querySelector('[data-provinces]');
+      if (!provinceLayer) return;
+      provinceLayer.innerHTML = '';
+
+      const mapWrapper = mapSvg.closest('.map-wrapper') || mapSvg.parentElement;
+      const tooltip = mapWrapper?.querySelector('[data-map-tooltip]');
+
+      regionKeys.forEach((region) => {
+        const names = provinceRegions[region];
+        names.forEach((name, index) => {
+          const circle = createProvince(region, index);
+          if (!circle) return;
+          circle.dataset.name = name;
+          circle.dataset.region = region;
+          provinceLayer.appendChild(circle);
+        });
       });
-      regionIndex += 1;
-    });
 
-    const handleTooltip = (event, circle) => {
-      if (!tooltip || !mapWrapper) return;
-      tooltip.textContent = `${circle.dataset.name}`;
-      const rect = mapWrapper.getBoundingClientRect();
-      const cx = parseFloat(circle.getAttribute('cx'));
-      const cy = parseFloat(circle.getAttribute('cy'));
-      const clientX = event instanceof KeyboardEvent ? rect.left + cx : event.clientX;
-      const clientY = event instanceof KeyboardEvent ? rect.top + cy : event.clientY;
-      tooltip.style.left = `${clientX - rect.left}px`;
-      tooltip.style.top = `${clientY - rect.top}px`;
-      tooltip.classList.add('show');
-      circle.classList.add('active');
-    };
+      const handleTooltip = (event, circle) => {
+        if (!tooltip || !mapWrapper) return;
+        tooltip.textContent = `${circle.dataset.name}`;
+        const rect = mapWrapper.getBoundingClientRect();
+        const cx = parseFloat(circle.getAttribute('cx'));
+        const cy = parseFloat(circle.getAttribute('cy'));
+        const clientX = event instanceof KeyboardEvent ? rect.left + cx : event.clientX;
+        const clientY = event instanceof KeyboardEvent ? rect.top + cy : event.clientY;
+        tooltip.style.left = `${clientX - rect.left}px`;
+        tooltip.style.top = `${clientY - rect.top}px`;
+        tooltip.classList.add('show');
+        circle.classList.add('active');
+      };
 
-    const hideTooltip = (circle) => {
-      if (!tooltip) return;
-      tooltip.classList.remove('show');
-      circle.classList.remove('active');
-    };
+      const hideTooltip = (circle) => {
+        if (!tooltip) return;
+        tooltip.classList.remove('show');
+        circle.classList.remove('active');
+      };
 
-    provinceLayer.querySelectorAll('circle').forEach((circle) => {
-      circle.addEventListener('mouseenter', (event) => handleTooltip(event, circle));
-      circle.addEventListener('mousemove', (event) => handleTooltip(event, circle));
-      circle.addEventListener('mouseleave', () => hideTooltip(circle));
-      circle.addEventListener('focus', (event) => handleTooltip(event, circle));
-      circle.addEventListener('blur', () => hideTooltip(circle));
-      circle.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          event.preventDefault();
-          handleTooltip(event, circle);
-        }
+      provinceLayer.querySelectorAll('circle').forEach((circle) => {
+        circle.addEventListener('mouseenter', (event) => handleTooltip(event, circle));
+        circle.addEventListener('mousemove', (event) => handleTooltip(event, circle));
+        circle.addEventListener('mouseleave', () => hideTooltip(circle));
+        circle.addEventListener('focus', (event) => handleTooltip(event, circle));
+        circle.addEventListener('blur', () => hideTooltip(circle));
+        circle.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handleTooltip(event, circle);
+          }
+        });
       });
     });
   }

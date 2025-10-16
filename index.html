@@ -87,10 +87,11 @@
       <div class="container">
         <div class="hero-content" data-animate>
           <span class="badge" aria-label="30 yılı aşkın lojistik deneyimi">30+ Yıllık Kurumsal Deneyim</span>
-          <h1 id="hero-title">Taşımada Güvenin Adresi</h1>
+          <h1 id="hero-title">Güvenli ve Profesyonel Taşımacılık</h1>
           <p>
-            Çankaya Nakliyat, Türkiye'nin 81 ilinde hassas yüklerden komple taşınmalara uzanan operasyonlarda
-            güvenilirlik, hız ve şeffaflık sunan modern lojistik çözüm ortağınızdır.
+            Çankaya Nakliyat, Türkiye'nin 81 ilinde ADR standartlarında yanıcı madde taşımacılığı, evden eve nakliyat
+            ve parça yük çözümlerini kurumsal disiplinle yönetir. Güvenli, izlenebilir ve şeffaf operasyonlarımızla
+            yüklerinizi tam zamanında teslim ederiz.
           </p>
           <div class="cta-group">
             <a class="btn btn-primary" href="services.html" data-router="true">Hizmetlerimizi Keşfedin</a>
@@ -228,37 +229,40 @@
     </section>
 
     <section class="section" aria-labelledby="nationwide-title">
-      <div class="container" style="display: grid; gap: 2.4rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: center;">
-        <div data-animate>
+      <div class="container nationwide-grid">
+        <div class="nationwide-copy" data-animate>
           <span class="badge">81 İlde Hizmet</span>
-          <h2 id="nationwide-title" class="section-title">Türkiye Genelinde Anlık Operasyon Yönetimi</h2>
+          <h2 id="nationwide-title" class="section-title">Türkiye Haritası Üzerinde Anlık Takip</h2>
           <p class="section-subtitle">
-            Ankara merkezli kontrol üssümüz ile araçlarımızı dijital haritalar üzerinde izliyor, müşterilerimize her adımda
-            şeffaf raporlar sunuyoruz.
+            Ankara merkezli operasyon merkezimizden filomuzun tamamını dijital haritalar üzerinden izliyor, tüm müşterilerimize
+            güvenli ve profesyonel taşımacılık deneyimi sunuyoruz.
           </p>
-          <a class="btn btn-outline" href="services.html" data-router="true">Türkiye Haritamızı Görün</a>
+          <ul class="values-list check-list" aria-label="Çankaya Nakliyat güvenceleri">
+            <li>
+              <strong>81 İl / 7 Bölge Kapsama</strong>
+              <p>Her bölgede saha ekiplerimiz ve çözüm ortaklarımızla eş zamanlı teslimat yönetimi.</p>
+            </li>
+            <li>
+              <strong>Gerçek Zamanlı İzleme</strong>
+              <p>ADR uyumlu sensörler ve güvenli iletişim altyapısıyla yük güvenliğini anlık kontrol ediyoruz.</p>
+            </li>
+            <li>
+              <strong>Kurumsal Raporlama</strong>
+              <p>Operasyon raporlarını, teslim tutanaklarını ve rota verilerini müşterilerimizle paylaşıyoruz.</p>
+            </li>
+          </ul>
+          <div class="cta-group">
+            <a class="btn btn-primary" href="services.html" data-router="true">Hizmet Ağımızı İnceleyin</a>
+            <a class="btn btn-outline" href="contact.html" data-router="true">Operasyon Merkezi ile Görüşün</a>
+          </div>
         </div>
-        <div data-animate>
-          <div class="route-map">
-            <svg viewBox="0 0 560 280" role="img" aria-label="Çankaya Nakliyat araç rotası">
-              <defs>
-                <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(192,192,192,0.4)" />
-                  <stop offset="100%" stop-color="rgba(230,57,70,0.65)" />
-                </linearGradient>
-              </defs>
-              <path d="M40 210 C120 140, 220 120, 320 170 S480 210, 520 120" fill="none" stroke="url(#routeGradient)" stroke-width="6" stroke-linecap="round" stroke-dasharray="12 18">
-                <animate attributeName="stroke-dashoffset" from="180" to="0" dur="6s" repeatCount="indefinite" />
-              </path>
-              <g fill="var(--color-red)">
-                <circle cx="40" cy="210" r="8">
-                  <animate attributeName="r" values="6;8;6" dur="3s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="520" cy="120" r="8">
-                  <animate attributeName="r" values="6;8;6" dur="3s" repeatCount="indefinite" />
-                </circle>
-              </g>
+        <div class="map-column" data-animate>
+          <div class="map-wrapper">
+            <svg viewBox="0 0 640 320" role="img" aria-label="Türkiye haritası üzerinde Çankaya Nakliyat hizmet noktaları" data-turkey-map>
+              <path class="map-outline" d="M32 180 C72 140 96 104 156 112 C208 120 228 96 288 104 C352 112 380 92 420 104 C476 120 516 108 560 140 C604 172 608 204 600 220 C588 248 548 258 520 260 C472 262 432 244 384 248 C344 252 312 272 268 276 C220 280 176 268 144 252 C108 234 76 224 56 212 C32 198 8 188 32 180 Z" />
+              <g class="map-provinces" data-provinces></g>
             </svg>
+            <div class="map-tooltip" role="status" data-map-tooltip>İl bilgisi</div>
           </div>
         </div>
       </div>
